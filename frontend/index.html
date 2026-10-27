@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="TraceMind AI — investigate distributed failures with real service telemetry and evidence." />
+  <title>TraceMind AI | Reliability Workspace</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview"><span class="brand-mark"><svg viewBox="0 0 36 36"><path d="M5 20h8l4-11 6 18 4-9h5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>TraceMind<span class="brand-light"> AI</span><small>ENGINEERING INTELLIGENCE</small></span></a>
+      <div class="workspace"><span class="workspace-avatar">D</span><div class="workspace-title"><strong>Demo Workspace</strong><small>Interactive sandbox</small></div><span class="chevron">⌄</span></div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="nav" aria-label="Main navigation">
+        <button data-view="overview" class="nav-link active"><span class="nav-ico">▦</span> Overview</button>
+        <button data-view="incidents" class="nav-link"><span class="nav-ico">◉</span> Incidents <span class="nav-count" id="nav-count">0</span></button>
+        <button data-view="copilot" class="nav-link"><span class="nav-ico">✧</span> AI copilot</button>
+        <button data-view="traces" class="nav-link"><span class="nav-ico">≋</span> Distributed traces</button>
+        <button data-view="services" class="nav-link"><span class="nav-ico">◇</span> Services & topology</button>
+        <button data-view="logs" class="nav-link"><span class="nav-ico">≡</span> Logs explorer</button>
+      </nav>
+      <p class="nav-label second-nav">RESOURCES</p>
+      <nav class="nav"><a href="/docs" class="nav-link" target="_blank" rel="noopener"><span class="nav-ico">⌘</span> API reference <span class="external">↗</span></a><button class="nav-link" id="guide-btn"><span class="nav-ico">ⓘ</span> How it works</button></nav>
+      <div class="sidebar-bottom"><div class="runtime-indicator"><i></i><span><strong>Controlled demo</strong><small>Evidence-driven investigator</small></span></div><div class="user-box"><span class="user-avatar">TM</span><span><strong>Developer</strong><small>Isolated demo data</small></span><span class="chevron">···</span></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button id="menu-btn" class="icon-btn mobile-menu" title="Toggle navigation">☰</button><div class="breadcrumbs">Workspace <span>/</span> <strong id="crumb">Overview</strong></div><div class="top-actions"><span class="environment"><i></i> sandbox</span><button class="icon-btn" id="refresh-btn" title="Refresh data">↻</button><span class="avatar">TM</span></div></header>
+      <div class="content">
+        <div id="view-container"></div>
+        <footer class="footer"><span>TRACEMIND AI <span class="footer-sep">/</span> HACKATHON BUILD v1.0</span><span><span class="footer-dot"></span> Real HTTP spans · Simulated fault scenarios · No external AI key required</span></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-content" id="modal-body"></div></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
